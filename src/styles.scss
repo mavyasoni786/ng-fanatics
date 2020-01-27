@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+
+html,body{
+    height: 100%;
+
+    .container{
+        height: 100%;
+    }
+}
+
+.navbar-section{
+    background-color: #222;
+    .navbar{
+        width: 100%;
+        margin-bottom: 0;
+        border: none;
+        padding: 0;
+        &::before{
+            display: none;
+        }
+        &::after{
+            display: none;
+        }
+        .navbar-header{
+            .navbar-brand{
+                height: auto;
+            }
+            &::before{
+                display: none;
+            }
+            &::after{
+                display: none;
+            }
+        }
+        ul{
+            flex-direction: unset;
+        }
+    }
+}

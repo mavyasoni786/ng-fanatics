@@ -1,29 +1,33 @@
-<form style="vertical-align: middle; margin-top: 25px;">
-    <div class="form-group col-sm-12">
-        <label>Name</label>
-        <input class="form-control" #name>
-    </div>
-    <div class="form-group col-sm-12">
-        <label>Chef:</label>
-        <input class="form-control" #chef>
-    </div>
+<app-top-header></app-top-header>
+<!-- <div class="add-recipe-form"> -->
+    <form style="vertical-align: middle; margin-top: 25px;">
+        <div class="form-group col-sm-12">
+            <label>Name</label>
+            <input class="form-control" #name>
+        </div>
+        <div class="form-group col-sm-12">
+            <label>Chef:</label>
+            <input class="form-control" #chef>
+        </div>
 
-    <div class="form-group col-sm-12">
-        <label>Description:</label>
-        <input class="form-control" #info>
-    </div>
-    <div class="form-group col-sm-12">
-        <label>Image:</label>
-        <input class="form-control" #imageURL>
-    </div>
-    <div class="form-group col-sm-12">
-        <label>Type:</label><br>
-        <select class="form-control" #type>
-            <option>Veg</option>
-            <option>Non-Veg</option>
-        </select>
-    </div>
-    <div class="form-group col-sm-12">
-            <button type="button" class="btn btn-primary" (click)="onAddRecipe(name.value,chef.value,info.value,imageURL.value,type.value)">Add Recipe</button>
-    </div>
-</form>
+        <div class="form-group col-sm-12">
+            <label>Description:</label>
+            <input class="form-control" #info>
+        </div>
+        <div class="form-group col-sm-12">
+            <label>Image:</label>
+            <input class="form-control" #imageURL>
+        </div>
+        <div class="form-group col-sm-12">
+            <label>Type:</label><br>
+            <select class="form-control" #type>
+                <option>Veg</option>
+                <option>Non-Veg</option>
+            </select>
+        </div>
+        <div class="form-group col-sm-12">
+            <button type="button" class="btn btn-primary"
+                (click)="onAddRecipe(name.value,chef.value,info.value,imageURL.value,type.value)">Add Recipe</button>
+        </div>
+    </form>
+<!-- </div> -->
