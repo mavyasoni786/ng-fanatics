@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { RecipeService } from '../recipe.service';
 
 @Component({
   selector: 'app-add-recipe-form',
@@ -7,9 +8,13 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class AddRecipeFormComponent implements OnInit {
 
-  @Input() recipes = [{ name: String, chef: String, info: String, image: String, type: String }]
+  @Input() recipes = []
   @Output() addRecipe = new EventEmitter<{ name: String, chef: String, info: String, image: String, type: String }>();
-  constructor() { }
+
+  constructor(public mRecipeService: RecipeService){
+    this.recipes = [...mRecipeService.recipeList];
+  }
+  
 
   ngOnInit() {
   }

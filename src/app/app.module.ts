@@ -8,6 +8,7 @@ import { RecipeRecordsComponent } from './recipe-records/recipe-records.componen
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { TopHeaderComponent } from './top-header/top-header.component';
+import { RecipeService } from './recipe.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { TopHeaderComponent } from './top-header/top-header.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [RecipeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

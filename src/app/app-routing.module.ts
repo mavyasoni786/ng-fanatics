@@ -7,16 +7,10 @@ import { AddRecipeFormComponent } from './add-recipe-form/add-recipe-form.compon
 
 
 const routes: Routes = [
-  {
-    path: '', component: LoginComponent
-  }
-  , {
-    path: 'recipes', component: RecipeRecordsComponent
-  }, {
-    path: 'home', component: HomeComponent
-  }, {
-    path: 'add-recipe', component: AddRecipeFormComponent
-  }
+  { path: '', component: LoginComponent },
+  { path: 'recipes', component: RecipeRecordsComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'add-recipe', component: AddRecipeFormComponent }
 ];
 
 @NgModule({

@@ -3,8 +3,7 @@ import { RecipeService } from '../recipe.service';
 
 @Component({
   selector: 'app-recipe-records',
-  templateUrl: './recipe-records.component.html',
-  providers: [RecipeService]
+  templateUrl: './recipe-records.component.html'
 })
 export class RecipeRecordsComponent implements OnInit {
 
