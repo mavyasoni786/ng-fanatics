@@ -8,14 +8,18 @@ import { Router } from '@angular/router';
 })
 export class TopHeaderComponent implements OnInit {
 
-  constructor(private router : Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
-
-
-  gotoAddRecipe(){
+  gotoAddRecipe() {
     this.router.navigate(["add-recipe"]);
+  }
+  gotoRecipes() {
+    this.router.navigate(["recipes"]);
+  }
+  gotoHome() {
+    this.router.navigate(["home"]);
   }
 
 

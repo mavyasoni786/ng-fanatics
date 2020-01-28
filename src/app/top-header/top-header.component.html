@@ -5,8 +5,8 @@
             <a class="navbar-brand" href="#">MyRecipes</a>
           </div>
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a [routerLink]="['recipes']">My Recipes</a></li>
+            <li class="active"><a (click)="gotoHome()">Home</a></li>
+            <li><a (click)="gotoRecipes()">My Recipes</a></li>
             <li><a (click)="gotoAddRecipe()">Add Recipe</a></li>
             <li><a [routerLink]=""><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
             <li><a [routerLink]=""><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
