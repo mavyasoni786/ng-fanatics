@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import {FormsModule} from '@angular/forms'
+import {ToastrModule} from 'ngx-toastr'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,7 +11,7 @@ import { RecipeRecordsComponent } from './recipe-records/recipe-records.componen
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { TopHeaderComponent } from './top-header/top-header.component';
-import { RecipeService } from './recipe.service';
+import { RecipeService } from './services/recipe.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { RecipeService } from './recipe.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ToastrModule.forRoot()
   ],
   providers: [RecipeService],
   bootstrap: [AppComponent]
