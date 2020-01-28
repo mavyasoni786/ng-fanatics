@@ -7,21 +7,11 @@ import { RecipeService } from '../recipe.service';
   styleUrls: ['./add-recipe-form.component.scss']
 })
 export class AddRecipeFormComponent implements OnInit {
-
-  @Input() recipes = []
-  @Output() addRecipe = new EventEmitter<{ name: String, chef: String, info: String, image: String, type: String }>();
-
-  constructor(public mRecipeService: RecipeService){
-    this.recipes = [...mRecipeService.recipeList];
-  }
+  constructor(public mRecipeService: RecipeService) { }
+  ngOnInit() { }
   
-
-  ngOnInit() {
-  }
-
-
-  onAddRecipe(name: string, chef: string, info: String, image: string, type: string) {
-    this.addRecipe.emit({ name: name, image: image, chef: chef, info: info, type: type })
+  onAddRecipe(name: string, chef: string, info: string, image: string, type: string) {
+    this.mRecipeService.recipeList.push({ name: name, image: image, chef: chef, info: info, type: type })
   }
 
 }
