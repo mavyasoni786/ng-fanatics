@@ -9,13 +9,4 @@ export class AppComponent {
   title = 'Hello-project';
   constructor(public mRecipeService: RecipeService){}
 
-  addRecipe(value:{name:string,chef:string,info:string,image:string,type:string}){
-    this.mRecipeService.recipeList.push({
-      name: value.name,
-      chef: value.chef,
-      info:value.info,
-      image: value.image,
-      type: value.type,
-    });
-  }
 }

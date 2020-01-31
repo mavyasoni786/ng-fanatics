@@ -10,8 +10,8 @@ export class AddRecipeFormComponent implements OnInit {
   constructor(public mRecipeService: RecipeService) { }
   ngOnInit() { }
   
-  onAddRecipe(name: string, chef: string, info: string, image: string, type: string) {
-    this.mRecipeService.recipeList.push({ name: name, image: image, chef: chef, info: info, type: type })
+  onAddRecipe(name: string, chef: string, info: string, image: string, type: string,isFavourite: boolean=false) {
+    this.mRecipeService.recipeList.push({ name: name, image: image, chef: chef, info: info, type: type,isFavourite: isFavourite })
   }
 
 }

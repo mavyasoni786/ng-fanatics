@@ -5,15 +5,30 @@
             <div class="card">
                 <div class="card-body">
                     <div *ngIf="recipe.type == 'Veg';else nonVeg">
-                            <h4 class="card-title">{{recipe.name}} <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Indian-vegetarian-mark.svg" style="height: 25px;width: 25px;"/></h4>
-                        </div>
-                        <ng-template #nonVeg>
-                                <h4 class="card-title">{{recipe.name}} <img src="https://www.pngkey.com/png/full/245-2459071_non-veg-icon-non-veg-symbol-png.png" style="height: 25px;width: 25px;"/></h4>
-                        </ng-template>
+                        <h4 class="card-title">{{recipe.name}} <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Indian-vegetarian-mark.svg"
+                                style="height: 25px;width: 25px;" /></h4>
+                    </div>
+                    <ng-template #nonVeg>
+                        <h4 class="card-title">{{recipe.name}} <img
+                                src="https://www.pngkey.com/png/full/245-2459071_non-veg-icon-non-veg-symbol-png.png"
+                                style="height: 25px;width: 25px;" /></h4>
+                    </ng-template>
+
+
+                    <div *ngIf="recipe.isFavourite == true;else favourite">
+                        <img src="https://img.icons8.com/officel/24/000000/like.png">                        
+                    </div>
+
+                    <ng-template #favourite>
+                        <img src="https://img.icons8.com/material-rounded/24/000000/like.png">
+                    </ng-template>
+
+
                     <p>👨‍🍳 {{recipe.chef}}</p>
-                    <img class="card-img" [src]="recipe.image" style="height: 100%;width: 100%"/>
+                    <img class="card-img" [src]="recipe.image" style="height: 100%;width: 100%" />
                     <!-- appHoverEffect defualtColor="{{recipe.type}}" -->
-                    <div class="card-body"  >
+                    <div class="card-body">
                         <p>
                             {{recipe.info}}
                         </p>
