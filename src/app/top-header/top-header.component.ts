@@ -22,5 +22,9 @@ export class TopHeaderComponent implements OnInit {
     this.router.navigate(["home"]);
   }
 
+  gotoFavouriteRecipes() {
+    this.router.navigate(["favourite-recipes"]);
+  }
+
 
 }

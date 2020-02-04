@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { TopHeaderComponent } from './top-header/top-header.component';
 import { RecipeService } from './services/recipe.service';
+import { FavouriteRecipesComponent } from './favourite-recipes/favourite-recipes.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { RecipeService } from './services/recipe.service';
     RecipeRecordsComponent,
     LoginComponent,
     HomeComponent,
-    TopHeaderComponent
+    TopHeaderComponent,
+    FavouriteRecipesComponent,
   ],
   imports: [
     BrowserModule,

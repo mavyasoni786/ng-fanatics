@@ -1,9 +1,4 @@
 <app-top-header></app-top-header>
-<div>
-    <input [(ngModel)]="search" class="form-control" type="text" name="Search" placeholder="Search"
-    (ngModelChange)="doSearch()"/>
-</div>
-<!-- <p>{{search}}</p> -->
 <div *ngIf="recipes.length > 0;else noRecipeFound">
     <div class="row" style="margin: 25px;">
         <div class="col-sm-3" *ngFor="let recipe of recipes; let i = index" style="margin-bottom: 25px;">
@@ -25,6 +20,8 @@
                     <ng-template #favourite>
                         <img src="https://img.icons8.com/material-rounded/24/000000/like.png" (click)="clicked(i)">
                     </ng-template>
+
+
                     <p>👨‍🍳 {{recipe.chef}}</p>
                     <img class="card-img" [src]="recipe.image" style="height: 100%;width: 100%" />
                     <!-- appHoverEffect defualtColor="{{recipe.type}}" -->
