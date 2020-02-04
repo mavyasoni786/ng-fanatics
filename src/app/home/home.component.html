@@ -1,8 +1,13 @@
 <app-top-header></app-top-header>
-<div>
-    <input [(ngModel)]="search" class="form-control" type="text" name="Search" placeholder="Search"
-    (ngModelChange)="doSearch()"/>
+<div class="row mt-5 mb-5">
+    <div class="col-xl-12">
+        <div class="search-section">
+            <input [(ngModel)]="search" class="form-control" type="text" name="Search" placeholder="Search"
+            (ngModelChange)="doSearch()"/>
+        </div>
+    </div>
 </div>
+
 <!-- <p>{{search}}</p> -->
 <div *ngIf="recipes.length > 0;else noRecipeFound">
     <div class="row" style="margin: 25px;">
