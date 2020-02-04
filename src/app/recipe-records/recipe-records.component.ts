@@ -16,4 +16,8 @@ export class RecipeRecordsComponent implements OnInit {
 
   }
 
+  clicked(index){
+    this.recipes[index].isFavourite = !(this.recipes[index].isFavourite);
+  }
+
 }
