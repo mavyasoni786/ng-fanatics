@@ -26,5 +26,7 @@ export class TopHeaderComponent implements OnInit {
     this.router.navigate(["favourite-recipes"]);
   }
 
-
+  gotoLogin() {
+    this.router.navigate([""]);
+  }
 }
